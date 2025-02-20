@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLC</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    nav {
+      background: #34495e;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .container h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .container p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .container ul li {
+      background: #ecf0f1;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container ul li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Image Styling */
+    .image-section {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 0;
+    }
+
+    .image-section img {
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    .contact-form button {
+      background: #1abc9c;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #16a085;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .container h2 {
+        font-size: 2rem;
+      }
+
+      .image-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-section img {
+        width: 80%;
+        margin-bottom: 20px;
+      
+    }
+
+.custom-image-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.custom-image-wrapper {
+    margin-bottom: 20px;
+}
+
+.custom-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.custom-image-wrapper p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+/* Navigation */
+nav {
+  background: #34495e;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1abc9c;
+
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>TAHOEconomics LLC</h1>
+    <p>Your Partner in Advancing Utility Regulation and Policy</p>
+  </header>
+
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#clients">Our Clients</a></li>
+    <li><a href="#principal">Principal</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  </nav>
+
+  <!-- Home Page -->
+  <div id="home" class="container">
+    <h2>Welcome to TAHOEconomics LLC</h2>
+    <p>
+      With extensive experience and a commitment to excellence, TAHOEconomics stands out as a leader in utility regulation and policy consulting. Our first-class service, deep industry expertise, and data-driven approach ensure that clients receive innovative solutions tailored to their unique challenges. We specialise in;
+    </p>
+  </div>
+
+</body>
+</html>
+    <div class="custom-image-section">
+    <div class="custom-image-wrapper">
+        <img src="myimage3.jpg" alt="Training Programs">
+        <p>Training Programs</p>
+    </div>
+    
+    <div class="custom-image-wrapper">
+        <img src="myimage4.jpeg" alt="Expert Witness Testimony">
+        <p>Expert Witness Testimony</p>
+    </div>
+    
+    <div class="custom-image-wrapper">
+        <img src="myimage2.jpeg" alt="Industry Restructuring">
+        <p>Industry Restructuring</p>
+    </div>
+    
+    <div class="custom-image-wrapper">
+        <img src="myimage1.jpeg" alt="Cost of Service Analysis">
+        <p>Cost of Service Analysis</p>
+    </div>
+</div>
+
+  <!-- About Us Page -->
+  <div id="about" class="container">
+    <h2>About Us</h2>
+    <p>
+      TAHOEconomics is a leading consulting firm recognized for its leadership in utility regulation and policy. With decades of experience, we are committed to transforming the utility landscape by providing innovative, strategic solutions that drive industry progress.
+    </p>
+  </div>
+
+  <!-- Services Page -->
+  <div id="services" class="container">
+    <h2>Services Offered</h2>
+    <p>
+      We offer a wide range of services to meet the needs of our clients. Our expertise includes:
+    </p>
+    <ul>
+      <li>All technical matters related to rate cases before regulatory agencies;</li>
+      <li>Service tariffs and rules</li>
+      <li>Non-rate case regulatory issues</li>
+      <li>Design of rules and regulations necessary for industry restructuring and market development</li>
+      <li>Institutional development of regulatory agencies</li>
+      <li>Consultation on asset sales and acquisition</li>
+      <li>Open access and market operations</li>
+      <li>Expert witness testimony</li>
+      <li>Delivery of training programs</li>
+    </ul>
+  </div>
+
+  <!-- Our Clients Page -->
+  <div id="clients" class="container">
+    <h2>Our Clients</h2>
+    <p>
+      We are proud to work with a diverse range of clients, including multinational corporations, government agencies, and non-profit organizations. Here are some of our past and present clients:
+    </p>
+    <ul>
+      <li>Vermont Department of Public Service</li>
+      <li>Mandalay Resort Group</li>
+      <li>Southern Nevada Water Authority</li>
+      <li>US Department of Energy</li>
+      <li>US Agency for International Development</li>
+      <li>Energy Regulatory Commission of the Philippines</li>
+      <li>Hawaiian Electric Company</li>
+      <li>Calpine</li>
+      <li>eMeter</li>
+      <li>Echelon Communications</li>
+      <li>Advanced Telecom Group</li>
+      <li>EnWater</li>
+      <li>Mesa Development Corporation</li>
+    </ul>
+  </div>
+
+  <!-- Principal Page -->
+  <div id="principal" class="container">
+    <h2>Principal</h2>
+    <p>
+      Larry Blank, Principal of TAHOEconomics, holds a Ph.D. in Economics specializing in all aspects of public utility regulation, restructuring of regulated industries, and market development. He is also a faculty member at New Mexico State University's Department of Economics & International Business and Center for Public Utilities, where he helps manage nationally recognized training programs and a Master's Degree program with an emphasis in utility regulation.
+    </p>
+    <p>
+      Dr. Blank's practical experience includes previous service as an Economist with The National Regulatory Research Institute at The Ohio State University, the Manager of Regulatory Policy & Market Analysis with the Public Utilities Commission of Nevada, and the Project Director for technical assistance and training at the Energy Regulatory Commission of the Philippines. His expertise includes all aspects of utility regulation, cost of service studies, project planning assessment, industry restructuring and market design, open access rules, tariff/rate design, performance-based regulation, and the unbundling of rates. He has served clients both as an advisor and as an expert witness in dozens of cases. Dr. Blank led the implementation of the Telecommunications Act of 1996 and Nevada's electric restructuring efforts on behalf of the Public Utilities Commission staff. He also directed a PUC Staff division responsible for the tariffs and rate design of all regulated utilities in Nevada.
+    </p>
+    <p>
+      Dr. Blank formed TAHOEconomics in 1999 and has served a number of clients, including government agencies, customers, and industry. Dr. Blank has worked as an advisor and/or expert witness on over 160 utility cases.
+    </p>
+  </div>
+
+  <!-- Contact Page -->
+  <div id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>
+      Email: <a href="mailto:LB@tahoeconomics.com">info@tahoeconomics.com</a><br>
+      Phone: +1-575-642-6148<br>
+    </p>
+    <h3>Get in Touch</h3>
+    <div class="contact-form">
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="phone" placeholder="Your Phone Number">
+        <button type="submit">Send </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 TAHOEconomics LLC. All rights reserved.</p>
+  </footer>
+</body>
+</html>
